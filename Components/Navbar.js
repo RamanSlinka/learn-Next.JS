@@ -1,5 +1,6 @@
 import styles from "../styles/Navbar.module.scss"
 import Link from "next/link";
+import Image from "next/image";
 import {useRouter} from "next/router";
 
 
@@ -14,7 +15,7 @@ const Navbar = () => {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo}>
-                NextJS
+                <Image src="/pagonia_logo.jpg" alt="logo" width={'60px'} height={'60px'}/>
             </div>
             <div className={styles.links}>
                 {navigation.map(({id, title, path}) => (
