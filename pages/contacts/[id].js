@@ -1,15 +1,16 @@
-import Heading from "../../Components/Heading";
-import Head from "next/head";
 
-const Contact = () => {
+import Head from "next/head";
+import ContactInfo from "../../Components/ContactInfo";
+
+const Id = ({contact}) => {
     return (
         <>
             <Head>
                 <title>Contact</title>
             </Head>
-        <Heading text={"Jack"}/>
+        <ContactInfo contact={contact}/>
         </>
             );
 };
 
-export default Contact;
+export default Id;
