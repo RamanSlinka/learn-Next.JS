@@ -14,7 +14,7 @@ const MyApp = ({Component, pageProps}) => {
                 <Component {...pageProps} />
             </main>
             <Image src={Pagonia}
-                   height={650}
+                   height={250}
                    width={500}
                    alt="pagonia"
                    placeholder="blur"
