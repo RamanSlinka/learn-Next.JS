@@ -2,8 +2,8 @@ import Heading from "./Heading";
 
 
 const ContactInfo = ({contact}) => {
-    const {name,email, address} = contact || {};
-    const {street,suite, city, zipcode} = address || {};
+    const {name, email, address} = contact || {};
+    const {street, suite, city, zipcode} = address || {};
 
     if (!contact) {
         return <Heading tag="h3" text={"Empty contact"}/>
@@ -11,7 +11,7 @@ const ContactInfo = ({contact}) => {
 
     return (
         <>
-<Heading tag={"h3"} text={name}/>
+            <Heading tag={"h3"} text={name}/>
             <div>
                 <strong>Email: </strong>
                 {email}
