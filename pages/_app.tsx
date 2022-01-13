@@ -3,8 +3,9 @@ import Layout from "../Components/Layout";
 import Image from "next/image";
 import Pagonia from "../public/pagonia.jpg"
 import Head from "next/head";
+import {AppProps} from "next/app";
 
-const MyApp = ({Component, pageProps}) => {
+const MyApp = ({Component, pageProps}: AppProps) => {
     return (
         <Layout>
             <Head>

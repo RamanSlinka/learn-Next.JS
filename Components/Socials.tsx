@@ -1,7 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Socials.module.scss";
+import {FC} from "react";
+import {homeTypeProps} from "../pages";
 
-const Socials = ({ socials }) => {
+
+
+const Socials:FC<homeTypeProps>  = ({ socials }) => {
 
     if (!socials) {
         return null;
