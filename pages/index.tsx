@@ -8,27 +8,32 @@ import {FC} from "react";
 
 
 export const getStaticProps: GetStaticProps = async () => {
+    try {
+        const response = await fetch(`${process.env.API_HOST}/socials/`);
+        const data = await response.json();
 
-    const response = await fetch(`${process.env.API_HOST}/socials/`);
-    const data = await response.json();
+        if (!data) {
+            return {
+                notFound: true,
+            }
+        }
 
-    if (!data) {
         return {
-            notFound: true,
+            props: {socials: data},
+        }
+    } catch {
+        return {
+            props: {socials: null},
         }
     }
-
-    return {
-        props: {socials: data},
-    }
-}
+};
 
 export type homeTypeProps = {
     socials: Array<socialsType>
 }
 
 
-const Home:FC<homeTypeProps> = ({socials}) => {
+const Home: FC<homeTypeProps> = ({socials}) => {
     return (
         <div className={styles.wrapper}>
             <Head>
